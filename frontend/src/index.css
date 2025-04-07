@@ -62,6 +62,9 @@
 .custom-cyan {
     background-color: var(--custom-cyan);
 }
+.custom-text-cyan {
+    color: var(--custom-cyan);
+}
 
 .custom-red {
     color: var(--custom-red);
