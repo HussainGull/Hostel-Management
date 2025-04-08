@@ -12,17 +12,18 @@ function Home() {
                     <h1 className="custom-white text-[24px] lg:mr-[60px] mb-4 lg:mb-0">HG</h1>
 
                     {/* Options Section */}
-                    <div className="p-2 w-full flex flex-wrap justify-center gap-x-10 gap-y-4 lg:gap-y-0 lg:flex-nowrap lg:w-auto lg:mt-[30px]">
+                    <div
+                        className="p-2 w-full flex flex-wrap justify-center gap-x-10 gap-y-4 lg:gap-y-0 lg:flex-nowrap lg:w-auto lg:mt-[30px]">
                         {[
-                            { icon: "dashboard", label: "Dashboard" },
-                            { icon: "rooms", label: "Rooms" },
-                            { icon: "attendance", label: "Attendance" },
-                            { icon: "accounts", label: "Accounts" },
-                            { icon: "maintenance", label: "Maintenance" }
+                            {icon: "dashboard", label: "Dashboard"},
+                            {icon: "rooms", label: "Rooms"},
+                            {icon: "attendance", label: "Attendance"},
+                            {icon: "accounts", label: "Accounts"},
+                            {icon: "maintenance", label: "Maintenance"}
                         ].map((item, idx) => (
                             <div key={idx} className="flex items-center">
                                 <img
-                                    src={`/dashboard-icons/${item.icon}.png`}
+                                    src={`/src/assets/dashboard-icons/${item.icon}.svg`}
                                     alt={`${item.label} Icon`}
                                     className="w-[24px] h-[24px]"
                                 />
@@ -33,11 +34,16 @@ function Home() {
 
                     {/* Settings Section */}
                     <div className="flex justify-center items-center gap-4 mt-4 lg:mt-0">
-                        {["calendar", "bell", "profile"].map((icon, idx) => (
-                            <div key={idx} className="w-[50px] h-[50px] lg:w-[62px] lg:h-[62px] rounded-full bg-[#2F2F2F] flex justify-center items-center">
-                                <img src={`/dashboard-icons/${icon}.png`} alt={`${icon} Icon`} />
-                            </div>
-                        ))}
+                        {
+                            [
+                                {icon: "calendar"},
+                                {icon: "bell"},
+                                {icon: "profile"},].map((icon, idx) => (
+                                <div key={idx}
+                                     className="w-[50px] h-[50px] lg:w-[62px] lg:h-[62px] rounded-full bg-[#2F2F2F] flex justify-center items-center">
+                                    <img src={`/src/assets/dashboard-icons/${icon.icon}.svg`} alt={`${icon} Icon`}/>
+                                </div>
+                            ))}
                     </div>
                 </div>
             </div>
