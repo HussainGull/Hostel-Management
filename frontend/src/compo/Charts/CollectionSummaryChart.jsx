@@ -36,7 +36,7 @@ export default function CollectionSummaryChart() {
                                     alt={`${item.label} Icon`}
                                     width={22}
                                     height={22}
-                                    className=" ml-4"
+                                    className=" ml-4 cursor-pointer"
                                 />
                             </div>
                         ))

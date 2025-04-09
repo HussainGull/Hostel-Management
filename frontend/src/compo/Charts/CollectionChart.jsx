@@ -23,7 +23,7 @@ export default function CollectionChart() {
 
     return (
         <Card
-            className="w-[260px] h-[300px] p-2 flex flex-col gap-0 justify-start bg-transparent border-none text-white shadow-md">
+            className="w-[260px] h-[300px] p-2 flex flex-col gap-0 justify-start bg-transparent border-none cursor-pointer text-white shadow-md">
 
             {/* Header */}
 
@@ -39,7 +39,7 @@ export default function CollectionChart() {
 
             {/* Donut Chart */}
 
-            <CardContent className="flex justify-start items-center flex-grow relative p-0">
+            <CardContent className="flex justify-start items-center flex-grow relative p-0 ">
                 <div className="relative w-[240px] h-[240px]">
                     <PieChart width={240} height={240}>
                         <Pie
@@ -48,9 +48,11 @@ export default function CollectionChart() {
                             nameKey="name"
                             cx="50%"
                             cy="50%"
+                            cursor='pointer'
                             innerRadius={85}
                             outerRadius={110}
                             stroke="none"
+                            className="outline-none focus:outline-none"
                         />
                     </PieChart>
                     {/* Center text inside the chart */}

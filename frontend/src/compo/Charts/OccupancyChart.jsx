@@ -29,9 +29,9 @@ const chartConfig = {
 
 export default function OccupancyChart() {
     return (
-        <Card className="w-[310px] h-[310px] flex flex-col custom-black p-5 gap-0">
+        <Card className="w-[310px] h-[310px] flex flex-col custom-black border-none outline-none p-5 gap-0">
             <CardHeader className="w-auto flex items-center p-2">
-                <CardTitle className={'text-white text-[18px] font-semibold'}>Hostel 1</CardTitle>
+                <CardTitle className={'text-white text-[18px] font-semibold cursor-pointer'}>Hostel 1</CardTitle>
                 <img src={'/src/assets/collection-chart-icons/white.svg'}
                      alt={'Navigate Icon'}
                      className={'w-[12] h-[12]'}
@@ -48,6 +48,7 @@ export default function OccupancyChart() {
                         endAngle={250}
                         innerRadius={85}
                         outerRadius={140}
+                        cursor='pointer'
                     >
                         <PolarGrid
                             gridType="circle"
@@ -79,7 +80,7 @@ export default function OccupancyChart() {
                                                 <tspan
                                                     x={viewBox.cx}
                                                     y={viewBox.cy}
-                                                    className={`fill-white text-4xl font-bold`}
+                                                    className={`fill-white text-4xl font-bold cursor-pointer`}
                                                 >
                                                     {chartData[0].visitors.toLocaleString()}
                                                 </tspan>
