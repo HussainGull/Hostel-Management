@@ -8,10 +8,10 @@ import HostelSummary from "@/Compo/Charts/Rooms/HostelSummary.jsx";
 import Search from "@/Compo/Search/SearchBar.jsx";
 import RoomCards from "@/Compo/Charts/Rooms/RoomCards.jsx";
 import HostelOverview from "@/Compo/Charts/Rooms/Cards/HostelOverview.jsx";
-import HostelsOccupancySummary from "@/Pages/Rooms/Occupancy/HostelsOccupancySummary.jsx";
+import HostelsOccupancy from "@/Pages/Rooms/Occupancy/HostelsOccupancy.jsx";
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
-        <HostelsOccupancySummary />
+        <HostelsOccupancy />
     </StrictMode>
 )

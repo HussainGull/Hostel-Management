@@ -1,8 +1,25 @@
-export default function TotalRooms({value}) {
+import { cn } from "@/lib/utils";
+
+export default function TotalRooms({
+                                       value,
+                                       label = "Total Rooms",
+                                       width = "145px",
+                                       height = "77px",
+                                       bgColor = "custom-black",
+                                       valueColor = "text-white",
+                                       className = "",
+                                   }) {
     return (
-        <div className={'custom-black w-[145px] h-[77px] flex flex-col items-start p-3 justify-center rounded-[10px] shadow-md'}>
-            <label className={'text-[16px] text-white font-light'}>Total Rooms</label>
-            <label className={'text-[20px] text-white font-semibold'}>{value}</label>
+        <div
+            className={cn(
+                "flex flex-col items-start p-3 justify-center rounded-[10px] shadow-md cursor-pointer",
+                bgColor,
+                className
+            )}
+            style={{ width, height }}
+        >
+            <label className="text-[16px] text-white font-light">{label}</label>
+            <label className={cn("text-[20px] font-semibold", valueColor)}>{value}</label>
         </div>
-    )
+    );
 }

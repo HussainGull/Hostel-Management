@@ -14,7 +14,7 @@ export default function OccupancySummary() {
                 />
             </div>
 
-            {/* HostelsOccupancySummary Charts */}
+            {/* HostelsOccupancy Charts */}
             <div className="w-full flex flex-wrap justify-center gap-4 px-2 py-4">
                 {[...Array(3)].map((_, index) => (
                     <div

@@ -37,10 +37,14 @@ export default function OccupancyChart(
         className = "",
         circleColor = "#111111",
         textColor = "white",
+        chartData = []
     }) {
+    const studentsCount = typeof chartData[0]?.students === "number" ? chartData[0].students : 0;
+    const radius = Math.min(140, 85 + (studentsCount / 1.5));
+
     return (
         <Card
-            className={cn("w-full max-w-[310px] h-fit flex flex-col border-none outline-none p-5 gap-0", bgColor, className)}>
+            className={cn("w-full max-w-[310px] h-fit flex flex-col border-none outline-none p-2 gap-0", bgColor, className)}>
             {/* Header */}
             <CardHeader className={cn('w-full flex items-center p-2 justify-between')}>
                 <CardTitle
@@ -81,7 +85,8 @@ export default function OccupancyChart(
                             className="first:fill-[#B0B0B0] last:fill-background"
                             polarRadius={[96, 74]}
                         />
-                        <RadialBar dataKey="visitors" background cornerRadius={10}/>
+                        <RadialBar dataKey="students" background cornerRadius={10}
+                        />
 
                         {/* Circle Background */}
                         <circle cx="50%" cy="50%" r="74" fill={circleColor}/>
@@ -103,7 +108,7 @@ export default function OccupancyChart(
                                                     className={cn("text-4xl font-bold cursor-pointer", `fill-[${textColor}]`)}
 
                                                 >
-                                                    {chartData[0].visitors.toLocaleString()}
+                                                    {studentsCount.toLocaleString()}%
                                                 </tspan>
                                             </text>
                                         );
@@ -115,6 +120,6 @@ export default function OccupancyChart(
                 </ChartContainer>
             </CardContent>
         </Card>
-);
+    );
 
 }
