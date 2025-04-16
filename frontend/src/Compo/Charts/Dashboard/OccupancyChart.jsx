@@ -13,8 +13,9 @@ import {
     CardContent,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card"
-import {ChartContainer} from "@/components/ui/chart"
+} from "@/components/ui/card.jsx"
+import {ChartContainer} from "@/components/ui/chart.jsx"
+import {cn} from "@/lib/utils" // adjust path as needed
 
 const chartData = [
     {browser: "Chrome", visitors: 90, fill: "var(--custom-cyan)"},
@@ -27,20 +28,43 @@ const chartConfig = {
     },
 }
 
-export default function OccupancyChart() {
+export default function OccupancyChart(
+    {
+        title = "Hostel 1",
+        showImage = true,
+        imageSrc = "/src/assets/navigate-icon/white-navi.svg",
+        bgColor = "custom-gray",
+        className = "",
+        circleColor = "#111111",
+        textColor = "white",
+    }) {
     return (
-        <Card className="w-[310px] h-[310px] flex flex-col custom-black border-none outline-none p-5 gap-0">
-            <CardHeader className="w-auto flex items-center p-2">
-                <CardTitle className={'text-white text-[18px] font-semibold cursor-pointer'}>Hostel 1</CardTitle>
-                <img src={'/src/assets/collection-chart-icons/white.svg'}
-                     alt={'Navigate Icon'}
-                     className={'w-[12] h-[12]'}
-                />
+        <Card
+            className={cn("w-full max-w-[310px] h-fit flex flex-col border-none outline-none p-5 gap-0", bgColor, className)}>
+            {/* Header */}
+            <CardHeader className={cn('w-full flex items-center p-2 justify-between')}>
+                <CardTitle
+                    className={cn("text-[18px] font-semibold cursor-pointer")}
+                    style={{color: textColor}}
+                >
+                    {title}
+
+                    {showImage && (
+                        <img
+                            src={imageSrc}
+                            alt="Navigate Icon"
+                            className="w-[12px] h-[12px]"
+                        />
+                    )}
+                </CardTitle>
             </CardHeader>
-            <CardContent className="w-[210px] h-[210px] flex pb-0">
+
+
+            {/* Chart */}
+            <CardContent className="w-full flex justify-center pb-0">
                 <ChartContainer
                     config={chartConfig}
-                    className="mx-auto aspect-square max-h-[250px]"
+                    className="aspect-square w-full max-w-[250px]"
                 >
                     <RadialBarChart
                         data={chartData}
@@ -48,24 +72,20 @@ export default function OccupancyChart() {
                         endAngle={250}
                         innerRadius={85}
                         outerRadius={140}
-                        cursor='pointer'
+                        cursor="pointer"
                     >
                         <PolarGrid
                             gridType="circle"
                             radialLines={false}
                             stroke="none"
-                            className="first:fill-[#292929] last:fill-background"
+                            className="first:fill-[#B0B0B0] last:fill-background"
                             polarRadius={[96, 74]}
                         />
                         <RadialBar dataKey="visitors" background cornerRadius={10}/>
 
-                        {/* Adding circle element */}
-                        <circle
-                            cx="50%"
-                            cy="50%"
-                            r="74"
-                            fill="#111111"
-                        />
+                        {/* Circle Background */}
+                        <circle cx="50%" cy="50%" r="74" fill={circleColor}/>
+
                         <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
                             <Label
                                 content={({viewBox}) => {
@@ -80,12 +100,13 @@ export default function OccupancyChart() {
                                                 <tspan
                                                     x={viewBox.cx}
                                                     y={viewBox.cy}
-                                                    className={`fill-white text-4xl font-bold cursor-pointer`}
+                                                    className={cn("text-4xl font-bold cursor-pointer", `fill-[${textColor}]`)}
+
                                                 >
                                                     {chartData[0].visitors.toLocaleString()}
                                                 </tspan>
                                             </text>
-                                        )
+                                        );
                                     }
                                 }}
                             />
@@ -93,7 +114,7 @@ export default function OccupancyChart() {
                     </RadialBarChart>
                 </ChartContainer>
             </CardContent>
-
         </Card>
-    )
+);
+
 }

@@ -66,6 +66,15 @@ const data = {
         {
           title: "Complaints",
           url: "#",
+        },{
+          title: "Stocks",
+          url: "#",
+        },{
+          title: "Users",
+          url: "#",
+        },{
+          title: "Meals",
+          url: "#",
         },
       ],
     },
@@ -75,15 +84,21 @@ const data = {
       icon: Bot,
       items: [
         {
-          title: "Genesis",
+          title: "Occupancy",
           url: "#",
         },
         {
-          title: "Explorer",
+          title: "Hostels",
           url: "#",
         },
         {
-          title: "Quantum",
+          title: "Rooms",
+          url: "#",
+        },{
+          title: "Assigned",
+          url: "#",
+        },{
+          title: "Furniture",
           url: "#",
         },
       ],

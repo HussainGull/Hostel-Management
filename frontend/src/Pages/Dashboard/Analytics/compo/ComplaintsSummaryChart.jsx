@@ -1,13 +1,13 @@
 import React from "react";
-import ComplaintsChart from "@/compo/Charts/ComplaintsChart.jsx";
+import ComplaintsChart from "@/Compo/Charts/Dashboard/ComplaintsChart.jsx";
 
 export default function ComplaintsSummaryChart() {
     return (
 
         <div
-            className="custom-gray w-[1000px] h-[175px] rounded-[10px] p-4 flex items-baseline justify-center shadow-md">
+            className="custom-gray w-full h-[175px] rounded-[10px] p-4 flex items-baseline justify-center shadow-md">
 
-            <div className="max-w-full w-full flex justify-center gap-6 items-center p-2">
+            <div className="max-w-full w-full flex gap-[65px] items-end p-2">
 
                 {/*<Complaints Chart/>*/}
 
@@ -17,9 +17,9 @@ export default function ComplaintsSummaryChart() {
 
                 {
                     [
-                        {icon: 'white', label: 'Total Complaints', color: '#FFFFFF', amount: '158'},
-                        {icon: 'white', label: 'Resolved', color: '#00FFF5', amount: '96'},
-                        {icon: 'white', label: 'Open', color: '#FFE605', amount: '57'},
+                        {icon: 'white-navi', label: 'Total Complaints', color: '#FFFFFF', amount: '158'},
+                        {icon: 'white-navi', label: 'Resolved', color: '#00FFF5', amount: '96'},
+                        {icon: 'white-navi', label: 'Open', color: '#FFE605', amount: '57'},
                     ].map((item, idx) => (
                         <div
                             key={idx}
@@ -29,7 +29,7 @@ export default function ComplaintsSummaryChart() {
                                 <div className={'w-auto flex items-center '}>
                                     <span className="text-[16px] font-light text-white">{item.label}</span>
                                     <img
-                                        src={`/src/assets/complaints-summary-icons/${item.icon}.svg`}
+                                        src={`/src/assets/navigate-icon/${item.icon}.svg`}
                                         alt={`${item.label} Icon`}
                                         width={16}
                                         height={16}

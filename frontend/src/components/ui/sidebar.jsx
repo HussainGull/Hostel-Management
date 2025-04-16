@@ -23,6 +23,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import {useCallback} from "react";
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
@@ -221,29 +222,28 @@ function Sidebar({
   );
 }
 
-function SidebarTrigger({
-  className,
-  onClick,
-  ...props
-}) {
-  const { toggleSidebar } = useSidebar()
+function SidebarTrigger({ className, onClick, ...props }) {
+    const { toggleSidebar } = useSidebar()
 
-  return (
-    <Button
-      data-sidebar="trigger"
-      data-slot="sidebar-trigger"
-      variant="ghost"
-      size="icon"
-      className={cn("size-7", className)}
-      onClick={(event) => {
+    const handleClick = useCallback((event) => {
         onClick?.(event)
         toggleSidebar()
-      }}
-      {...props}>
-      <PanelLeftIcon />
-      <span className="sr-only">Toggle Sidebar</span>
-    </Button>
-  );
+    }, [onClick, toggleSidebar])
+
+    return (
+        <Button
+            data-sidebar="trigger"
+            data-slot="sidebar-trigger"
+            variant="ghost"
+            size="icon"
+            className={cn("size-7", className)}
+            onClick={handleClick}
+            {...props}
+        >
+            <PanelLeftIcon />
+            <span className="sr-only">Toggle Sidebar</span>
+        </Button>
+    )
 }
 
 function SidebarRail({

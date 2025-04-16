@@ -1,14 +1,14 @@
 import React from "react";
-import CollectionChart from "@/compo/Charts/CollectionChart.jsx";
+import CollectionChart from "@/Compo/Charts/Dashboard/CollectionChart.jsx";
 
 
 export default function CollectionSummaryChart() {
     return (
         <div
-            className="custom-gray w-[1000px] h-[320px] rounded-[10px] p-2 flex items-center justify-between shadow-md">
-            <div className="max-w-full w-full flex justify-center items-center">
+            className="custom-gray w-full h-[320px] p-4 rounded-[10px] flex items-center justify-between">
+            <div className="max-w-full w-full flex gap-x-[50px]  justify-between items-center">
 
-                {/*<Categorized Chart/>*/}
+                {/*<Categorized Chart/>*/}=
                 
                 <CollectionChart/>
 
@@ -32,7 +32,7 @@ export default function CollectionSummaryChart() {
                                 </div>
 
                                 <img
-                                    src={`/src/assets/collection-summary-chart-icons/${item.icon}.svg`}
+                                    src={`/src/assets/collection-summary-icons/${item.icon}.svg`}
                                     alt={`${item.label} Icon`}
                                     width={22}
                                     height={22}

@@ -4,19 +4,20 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-    --custom-gray: #202020;
-    --custom-black: #000000;
-    --custom-cyan: #00FFF5;
-    --custom-red: #F10606;
-    --custom-yellow: #FFE605;
-    --custom-pink: #FF05C8;
-    --custom-dark-green: #00868D;
-    --custom-green: #00FFA3;
-    --custom-purple: #9747FF;
-    --custom-blue: #0094FF;
-    --custom-orange: #FF6B00;
-    --custom-white: #FFFFFF;
-    --custom-light-brown: #B0B0B0;
+    --custom-gray: #F7F8FA;              /* Light neutral gray for backgrounds/containers */
+    --custom-black: #111827;             /* Soft black (for headings, strong text) */
+    --custom-cyan: #00FFF5;              /* Refined cyan for accent/highlight */
+    --custom-red: #F10606;               /* Alert color (buttons, badges, icons) */
+    --custom-yellow: #FFE605;            /* Warning or attention indicators */
+    --custom-pink: #FF05C8;              /* Feminine or creative highlights */
+    --custom-dark-green: #047857;        /* Rich green for success/states */
+    --custom-green: #22C55E;             /* Active/approved/success state */
+    --custom-purple: #8B5CF6;            /* Branding or status tag */
+    --custom-blue: #3B82F6;              /* Main secondary color (buttons, links) */
+    --custom-text-gray: #B0B0B0;
+    --custom-orange: #FB923C;            /* Warnings or highlights */
+    --custom-white: #FFFFFF;             /* Base background */
+    --custom-light-brown: #9CA3AF;
     --radius: 0.625rem;
     --background: oklch(1 0 0);
     --foreground: oklch(0.145 0 0);
@@ -59,9 +60,17 @@
     background-color: var(--custom-black);
 }
 
+.custom-text-black {
+    color: var(--custom-black);
+}
+.custom-text-gray {
+    color: var(--custom-text-gray);
+}
+
 .custom-cyan {
     background-color: var(--custom-cyan);
 }
+
 .custom-text-cyan {
     color: var(--custom-cyan);
 }

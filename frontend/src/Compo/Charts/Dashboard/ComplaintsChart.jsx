@@ -13,8 +13,8 @@ export default function ComplaintsChart() {
     return (
         <div className={'w-auto flex flex-col gap-y-[16px]'}>
             <div className={'w-auto flex items-center justify-start'}>
-                <label className={'text-[20px] font-semibold text-white'}>Complaints</label>
-                <img src={`/src/assets/collection-chart-icons/white.svg`}
+                <label className={'text-[20px] font-semibold custom-text-black'}>Complaints</label>
+                <img src={`/src/assets/navigate-icon/black-navi.svg`}
                      alt={'Collection Icon'}
                      className={'w-[12px] h-[12px] ml-2'}
                 />

@@ -7,7 +7,7 @@ import {
     CardContent,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card.jsx"
 
 const chartData = [
     {name: "Collected", value: 300000, fill: "#00FFF5"},
@@ -23,15 +23,15 @@ export default function CollectionChart() {
 
     return (
         <Card
-            className="w-[260px] h-[300px] p-2 flex flex-col gap-0 justify-start bg-transparent border-none cursor-pointer text-white shadow-md">
+            className="w-[260px] h-[300px] p-2 flex flex-col gap-0 justify-start bg-transparent border-none cursor-pointer shadow-none">
 
             {/* Header */}
 
             <CardHeader className="w-full p-2 gap-0">
                 <CardTitle className="flex items-center gap-2 text-[20px] font-semibold">
-                    <span className="truncate">Fees Collection</span>
+                    <span className="truncate custom-text-black">Fees Collection</span>
                     <img
-                        src={`/src/assets/collection-chart-icons/white.svg`} alt="icon"
+                        src={`/src/assets/navigate-icon/black-navi.svg`} alt="icon"
                         className="w-[12px] h-[12px] object-contain"
                     />
                 </CardTitle>
@@ -57,7 +57,7 @@ export default function CollectionChart() {
                     </PieChart>
                     {/* Center text inside the chart */}
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                        <span className="text-white text-[40px] font-bold">{percentage}%</span>
+                        <span className="custom-text-black text-[40px] font-bold">{percentage}%</span>
                     </div>
                 </div>
             </CardContent>
