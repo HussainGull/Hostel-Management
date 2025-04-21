@@ -1,17 +1,13 @@
 import {StrictMode} from 'react'
 import {createRoot} from 'react-dom/client'
 import './index.css'
-import Students from "@/Pages/Dashboard/Students/Students.jsx";
-import Analytics from "@/Pages/Dashboard/Analytics/Analytics.jsx";
-import DashboardLayout from "@/Compo/Layout/DashboardLayout.jsx";
-import HostelSummary from "@/Compo/Charts/Rooms/HostelSummary.jsx";
-import Search from "@/Compo/Search/SearchBar.jsx";
-import RoomCards from "@/Compo/Charts/Rooms/RoomCards.jsx";
-import HostelOverview from "@/Compo/Charts/Rooms/Cards/HostelOverview.jsx";
-import HostelsOccupancy from "@/Pages/Rooms/Occupancy/HostelsOccupancy.jsx";
+import Assigned from "@/Pages/Rooms/Assigned/Assigned.jsx";
+import HostelRevenue from "@/Pages/Rooms/Hostels/HostelRevenue.jsx";
+import RoomsSummary from "@/Pages/Rooms/Rooms/RoomsSummary.jsx";
+import AssignedOverview from "@/Pages/Rooms/Assigned/AssignedOverview.jsx";
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
-        <HostelsOccupancy />
+            <Assigned/>
     </StrictMode>
 )

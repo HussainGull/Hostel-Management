@@ -4,20 +4,26 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-    --custom-gray: #F7F8FA;              /* Light neutral gray for backgrounds/containers */
-    --custom-black: #111827;             /* Soft black (for headings, strong text) */
-    --custom-cyan: #00FFF5;              /* Refined cyan for accent/highlight */
-    --custom-red: #F10606;               /* Alert color (buttons, badges, icons) */
-    --custom-yellow: #FFE605;            /* Warning or attention indicators */
-    --custom-pink: #FF05C8;              /* Feminine or creative highlights */
-    --custom-dark-green: #047857;        /* Rich green for success/states */
-    --custom-green: #22C55E;             /* Active/approved/success state */
-    --custom-purple: #8B5CF6;            /* Branding or status tag */
-    --custom-blue: #3B82F6;              /* Main secondary color (buttons, links) */
-    --custom-text-gray: #B0B0B0;
-    --custom-orange: #FB923C;            /* Warnings or highlights */
-    --custom-white: #FFFFFF;             /* Base background */
-    --custom-light-brown: #9CA3AF;
+    --base-bg: #ffffff;
+    --base-surface: #fafafa;
+    --text-primary: #111827;
+    --text-secondary: #B0B0B0;
+
+    /* Accent Colors */
+    --accent-black: #111827;
+    --accent-cyan: #00B8AE;
+    --accent-yellow: #D4BC00;
+    --accent-pink: #C900A1;
+    --accent-red: #C30000;
+    --accent-teal: #00666C;
+    --accent-blue: #0070CC;
+    --accent-subtle-blue: #142442;
+    --accent-mint: #00B77D;
+    --accent-violet: #732ED9;
+
+    /* Optional Legacy or Utility */
+    --gray-light: #F7F8FA;
+    --gray-dark: #9CA3AF;
     --radius: 0.625rem;
     --background: oklch(1 0 0);
     --foreground: oklch(0.145 0 0);
@@ -52,67 +58,108 @@
     --sidebar-ring: oklch(0.708 0 0);
 }
 
-.custom-gray {
-    background-color: var(--custom-gray);
+/* ✅ Background Utilities */
+.bg-base {
+    background-color: var(--base-bg);
 }
 
-.custom-black {
-    background-color: var(--custom-black);
+.bg-surface {
+    background-color: var(--base-surface);
 }
 
-.custom-text-black {
-    color: var(--custom-black);
-}
-.custom-text-gray {
-    color: var(--custom-text-gray);
+.bg-black {
+    background-color: var(--accent-black);
 }
 
-.custom-cyan {
-    background-color: var(--custom-cyan);
+.bg-cyan {
+    background-color: var(--accent-cyan);
 }
 
-.custom-text-cyan {
-    color: var(--custom-cyan);
+.bg-teal {
+    background-color: var(--accent-teal);
 }
 
-.custom-red {
-    color: var(--custom-red);
+.bg-subtle-blue {
+    background-color: var(--accent-subtle-blue);
 }
 
-.custom-yellow {
-    color: var(--custom-yellow);
+.bg-red {
+    background-color: var(--accent-red);
 }
 
-.custom-pink {
-    color: var(--custom-pink);
+.bg-yellow {
+    background-color: var(--accent-yellow);
 }
 
-.custom-purple {
-    color: var(--custom-purple);
+.bg-pink {
+    background-color: var(--accent-pink);
 }
 
-.custom-blue {
-    color: var(--custom-blue);
+.bg-blue {
+    background-color: var(--accent-blue);
 }
 
-.custom-dark-green {
-    color: var(--custom-dark-green);
+.bg-mint {
+    background-color: var(--accent-mint);
 }
 
-.custom-green {
-    color: var(--custom-green);
+.bg-violet {
+    background-color: var(--accent-violet);
 }
 
-.custom-orange {
-    color: var(--custom-orange);
+/* ✅ Text Color Utilities */
+.text-primary {
+    color: var(--text-primary);
 }
 
-.custom-white {
-    color: var(--custom-white);
+.text-secondary {
+    color: var(--text-secondary);
 }
 
-.custom-light-brown {
-    color: var(--custom-light-brown);
+.text-cyan {
+    color: var(--accent-cyan);
+}
+
+.text-yellow {
+    color: var(--accent-yellow);
+}
+
+.text-pink {
+    color: var(--accent-pink);
+}
+
+.text-red {
+    color: var(--accent-red);
+}
+
+.text-blue {
+    color: var(--accent-blue);
+}
+
+.text-teal {
+    color: var(--accent-teal);
+}
+
+.text-mint {
+    color: var(--accent-mint);
+}
+
+.text-black {
+    color: var(--accent-black);
+}
+
+.text-violet {
+    color: var(--accent-violet);
+}
+
+/* ✅ Optional Legacy Utility Mapping */
+.bg-gray-light {
+    background-color: var(--gray-light);
+}
+
+
+.text-gray-dark {
+    color: var(--gray-dark);
 }
 
 @theme inline {

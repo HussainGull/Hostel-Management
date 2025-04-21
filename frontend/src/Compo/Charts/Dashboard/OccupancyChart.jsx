@@ -10,12 +10,13 @@ import {
 
 import {
     Card,
-    CardContent,
+    CardContent, CardDescription,
     CardHeader,
     CardTitle,
 } from "@/components/ui/card.jsx"
 import {ChartContainer} from "@/components/ui/chart.jsx"
-import {cn} from "@/lib/utils" // adjust path as needed
+import {cn} from "@/lib/utils"
+import {Description} from "@headlessui/react"; // adjust path as needed
 
 const chartData = [
     {browser: "Chrome", visitors: 90, fill: "var(--custom-cyan)"},
@@ -32,6 +33,8 @@ export default function OccupancyChart(
     {
         title = "Hostel 1",
         showImage = true,
+        description = '',
+        showDescription = true,
         imageSrc = "/src/assets/navigate-icon/white-navi.svg",
         bgColor = "custom-gray",
         className = "",
@@ -44,11 +47,11 @@ export default function OccupancyChart(
 
     return (
         <Card
-            className={cn("w-full max-w-[310px] h-fit flex flex-col border-none outline-none p-2 gap-0", bgColor, className)}>
+            className={cn("w-full max-w-[310px] h-fit flex flex-col justify-between border-none outline-none p-2 gap-0", bgColor, className)}>
             {/* Header */}
-            <CardHeader className={cn('w-full flex items-center p-2 justify-between')}>
+            <CardHeader className={cn('w-full flex flex-col items-start p-2 justify-between')}>
                 <CardTitle
-                    className={cn("text-[18px] font-semibold cursor-pointer")}
+                    className={cn("flex items-center gap-x-3 text-[18px] font-semibold cursor-pointer")}
                     style={{color: textColor}}
                 >
                     {title}
@@ -60,7 +63,11 @@ export default function OccupancyChart(
                             className="w-[12px] h-[12px]"
                         />
                     )}
+
                 </CardTitle>
+                {showDescription && (
+                    <CardDescription>{description}</CardDescription>
+                )}
             </CardHeader>
 
 
