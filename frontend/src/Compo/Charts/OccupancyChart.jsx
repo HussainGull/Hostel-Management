@@ -15,11 +15,11 @@ import {
     CardTitle,
 } from "@/components/ui/card.jsx"
 import {ChartContainer} from "@/components/ui/chart.jsx"
-import {cn} from "@/lib/utils"
+import {cn} from "@/lib/utils.js"
 import {Description} from "@headlessui/react"; // adjust path as needed
 
 const chartData = [
-    {browser: "Chrome", visitors: 90, fill: "var(--custom-cyan)"},
+    {browser: "Chrome", visitors: 90, fill: "var(--bg-cyan)"},
 ]
 
 const chartConfig = {
@@ -32,14 +32,10 @@ const chartConfig = {
 export default function OccupancyChart(
     {
         title = "Hostel 1",
-        showImage = true,
         description = '',
         showDescription = true,
-        imageSrc = "/src/assets/navigate-icon/white-navi.svg",
-        bgColor = "custom-gray",
         className = "",
         circleColor = "#111111",
-        textColor = "white",
         chartData = []
     }) {
     const studentsCount = typeof chartData[0]?.students === "number" ? chartData[0].students : 0;
@@ -47,23 +43,18 @@ export default function OccupancyChart(
 
     return (
         <Card
-            className={cn("w-full max-w-[310px] h-fit flex flex-col justify-between border-none outline-none p-2 gap-0", bgColor, className)}>
+            className={cn("w-full max-w-[310px] h-fit flex flex-col justify-between border-none outline-none p-2 gap-0 bg-surface", className)}>
             {/* Header */}
             <CardHeader className={cn('w-full flex flex-col items-start p-2 justify-between')}>
                 <CardTitle
-                    className={cn("flex items-center gap-x-3 text-[18px] font-semibold cursor-pointer")}
-                    style={{color: textColor}}
+                    className={cn("flex items-center gap-x-3 text-[18px] font-semibold cursor-pointer text-white")}
                 >
                     {title}
-
-                    {showImage && (
                         <img
-                            src={imageSrc}
+                            src={"/src/assets/navigate-icon/white-navi.svg"}
                             alt="Navigate Icon"
                             className="w-[12px] h-[12px]"
                         />
-                    )}
-
                 </CardTitle>
                 {showDescription && (
                     <CardDescription>{description}</CardDescription>
@@ -112,7 +103,7 @@ export default function OccupancyChart(
                                                 <tspan
                                                     x={viewBox.cx}
                                                     y={viewBox.cy}
-                                                    className={cn("text-4xl font-bold cursor-pointer", `fill-[${textColor}]`)}
+                                                    className={cn("text-4xl font-bold cursor-pointer", `fill-[#ffffff]`)}
 
                                                 >
                                                     {studentsCount.toLocaleString()}%

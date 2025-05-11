@@ -1,7 +1,7 @@
 import React from "react";
 import DashboardLayout from "@/Compo/Layout/DashboardLayout.jsx";
 import SearchBar from "@/Compo/Search/SearchBar.jsx";
-import HostelSummary from "@/Compo/Charts/Rooms/HostelSummary.jsx";
+import HostelSummary from "@/Compo/Rooms/HostelSummary.jsx";
 import {hostelData} from "@/Pages/Rooms/data.jsx";
 
 

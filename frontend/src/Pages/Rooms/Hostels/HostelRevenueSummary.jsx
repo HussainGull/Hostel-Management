@@ -1,11 +1,11 @@
 import AddButton from "@/Compo/Buttons/AddButton.jsx";
-import OccupancyChart from "@/Compo/Charts/Dashboard/OccupancyChart.jsx";
-import StatCard from "@/Compo/Charts/Rooms/Cards/StatCard.jsx";
-import DataCard from "@/Compo/Charts/Rooms/Cards/DataCard.jsx";
-import DataRow from "@/Compo/Charts/Rooms/Cards/DataRow.jsx";
-import MiniCollectionChart from "@/Compo/Charts/Dashboard/MiniCollectionChart.jsx";
+import OccupancyChart from "@/Compo/Charts/OccupancyChart.jsx";
+import StatCard from "@/Compo/Rooms/Cards/StatCard.jsx";
+import DataCard from "@/Compo/Rooms/Cards/DataCard.jsx";
+import DataRow from "@/Compo/Rooms/Cards/DataRow.jsx";
+import MiniCollectionChart from "@/Compo/Charts/MiniCollectionChart.jsx";
 import FurnitureList from "@/Compo/DataTable/Furniture/FurnitureList.jsx";
-import FundsOverview from "@/Compo/Charts/Rooms/Cards/FundsOverview.jsx";
+import FundsOverview from "@/Compo/Rooms/Cards/FundsOverview.jsx";
 
 export default function HostelRevenueSummary() {
     return (

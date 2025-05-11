@@ -1,4 +1,4 @@
-import MiniCollectionChart from "@/Compo/Charts/Dashboard/MiniCollectionChart.jsx";
+import MiniCollectionChart from "@/Compo/Charts/MiniCollectionChart.jsx";
 
 export default function MiniCollectionSummaryChart() {
     return (

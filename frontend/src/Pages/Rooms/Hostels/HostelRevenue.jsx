@@ -1,7 +1,7 @@
 import AddButton from "@/Compo/Buttons/AddButton.jsx";
 import DashboardLayout from "@/Compo/Layout/DashboardLayout.jsx";
 import SearchBar from "@/Compo/Search/SearchBar.jsx";
-import LabelCard from "@/Compo/Charts/LabelCard/LabelCard.jsx";
+import LabelCard from "@/Compo/LabelCard/LabelCard.jsx";
 import HostelRevenueSummary from "@/Pages/Rooms/Hostels/HostelRevenueSummary.jsx";
 
 export default function HostelRevenue () {

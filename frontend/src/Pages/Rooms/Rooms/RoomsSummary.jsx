@@ -1,13 +1,13 @@
 import DashboardLayout from "@/Compo/Layout/DashboardLayout.jsx";
 import {Button} from "@/components/ui/button"
 import SearchBar from "@/Compo/Search/SearchBar.jsx";
-import LabelCard from "@/Compo/Charts/LabelCard/LabelCard.jsx";
+import LabelCard from "@/Compo/LabelCard/LabelCard.jsx";
 import AddButton from "@/Compo/Buttons/AddButton.jsx";
-import DataCard from "@/Compo/Charts/Rooms/Cards/DataCard.jsx";
-import MiniStatCard from "@/Compo/Charts/Rooms/Cards/MiniStatCard.jsx";
+import DataCard from "@/Compo/Rooms/Cards/DataCard.jsx";
+import MiniStatCard from "@/Compo/Rooms/Cards/MiniStatCard.jsx";
 import FurnitureList from "@/Compo/DataTable/Furniture/FurnitureList.jsx";
-import MiniCollectionSummaryChart from "@/Compo/Charts/Dashboard/MiniCollectionSummaryChart.jsx";
-import DistributionBar from "@/Compo/Charts/Dashboard/DistributionBar.jsx";
+import MiniCollectionSummaryChart from "@/Compo/Charts/MiniCollectionSummaryChart.jsx";
+import DistributionBar from "@/Compo/Charts/DistributionBar.jsx";
 
 export default function RoomsSummary() {
     return (

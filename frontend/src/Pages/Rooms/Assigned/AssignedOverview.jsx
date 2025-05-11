@@ -1,13 +1,13 @@
-import MiniStatCard from "@/Compo/Charts/Rooms/Cards/MiniStatCard.jsx";
-import DataCard from "@/Compo/Charts/Rooms/Cards/DataCard.jsx";
-import LabelCard from "@/Compo/Charts/LabelCard/LabelCard.jsx";
+import MiniStatCard from "@/Compo/Rooms/Cards/MiniStatCard.jsx";
+import DataCard from "@/Compo/Rooms/Cards/DataCard.jsx";
+import LabelCard from "@/Compo/LabelCard/LabelCard.jsx";
+import RoomStatusBoard from "@/Compo/Charts/RoomStatusBoard.jsx";
 
-export default function AssignedOverview(
-) {
+export default function AssignedOverview() {
     return (
         <div className={'w-full bg-surface rounded-xl p-4'}>
 
-            <div className={'w-fit flex items-center gap-7.5'}>
+            <div className={'w-full flex items-center gap-7.5'}>
 
                 <div className={'w-fit flex items-center justify-center gap-4'}>
                     <img src={'/src/assets/icons/bed.svg'} alt={'Bed Icon'} className={'w-9 h-9'}/>
@@ -32,10 +32,7 @@ export default function AssignedOverview(
 
             </div>
 
-            <div className={'w-full'}>
-
-
-            </div>
+                <RoomStatusBoard/>
 
         </div>
     )
